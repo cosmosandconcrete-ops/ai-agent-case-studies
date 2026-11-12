@@ -67,6 +67,19 @@ emailed a spreadsheet.
   approvals, and kill-switch presses are all timestamped and
   attributable.
 
+## Current status (November 2026)
+
+STARBREACH is in production as Cosmos & Concrete's security-assessment
+offering. Its front door is a free Posture Check: a business owner
+requests one for their own domain and gets a graded, plain-English
+report on the public layer — email anti-spoofing records, certificate
+and encryption health, browser safety headers, cookie flags. Deeper
+assessments run under the authorization and scope discipline described
+above. Our own production website is a standing test target: after
+remediating what the checker flagged (SPF moved to a hard-fail policy,
+DMARC raised from monitor-only to quarantine), it now earns a perfect
+grade in the public checker.
+
 ## Lessons from building it
 
 - **A time limit that only checks when output arrives is not a time
