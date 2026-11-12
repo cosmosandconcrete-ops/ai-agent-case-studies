@@ -80,6 +80,19 @@ remediating what the checker flagged (SPF moved to a hard-fail policy,
 DMARC raised from monitor-only to quarantine), it now earns a perfect
 grade in the public checker.
 
+The November build-out closed the gap to the commercial AI-pentest
+tier: a Deep mode that runs the full template library to completion
+plus an OWASP ZAP active-scan pass; a retest mode that closes fixed
+findings as *verified fixed* instead of taking anyone's word for it;
+an attestation letter and compliance mapping in the client report;
+and an approval-gated proof stage — controlled, detection-only steps
+(sqlmap injection proof, lockout checks, exposed-config follow-through,
+unauthenticated-access spot-checks) that execute only inside a
+client-approved window, with backups attested, each move individually
+approved, and every execution recorded. The whole build was verified
+against a deliberately vulnerable test target before it shipped:
+twenty assertions, twenty passes.
+
 ## Lessons from building it
 
 - **A time limit that only checks when output arrives is not a time
